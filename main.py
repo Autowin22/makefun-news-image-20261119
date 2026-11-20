@@ -10,7 +10,7 @@ def main():
         print(f"Error creating output directory {output_dir}: {e}", file=sys.stderr)
         sys.exit(1)
 
-    src = "entry.png"
+    src = os.path.join(os.path.dirname(os.path.abspath(__file__)), "entry.png")
     dst = os.path.join(output_dir, "entry.png")
     
     if not os.path.exists(src):
